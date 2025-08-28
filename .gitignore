@@ -1,0 +1,24 @@
+# Hugo build artifacts
+/public/
+/resources/
+/.hugo_build.lock
+hugo_stats.json
+
+# (Docs 방식 안 쓸 거면 유지 / 쓴다면 아래 B안 참조)
+# /docs/
+
+# OS / Editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# (선택) Node 관련 - PostCSS 등 쓴다면
+node_modules/
+
+# Env
+.env
+.env.*
