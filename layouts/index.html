@@ -1,0 +1,16 @@
+{{ define "main" }}
+<main class="main">
+  <header class="page-header"><h1>Q&A</h1></header>
+  <div class="post-list">
+    {{ range .Site.RegularPages }} {{/* 루트에 있는 페이지만 걸러내고 싶으면
+    조건 추가: if eq .Section "" (섹션이 비어있는 페이지만) */}}
+    <article class="post-entry">
+      <header class="entry-header">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+      </header>
+      {{ with .Summary }} {{ end }}
+    </article>
+    {{ end }}
+  </div>
+</main>
+{{ end }}

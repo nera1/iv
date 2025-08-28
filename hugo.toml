@@ -1,0 +1,40 @@
+baseURL = "/"
+languageCode = "ko-kr"
+title = "IV"
+theme = "PaperMod"
+
+[pagination]
+  pagerSize = 10
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'
+
+[params]
+  defaultTheme = "dark"
+  ShowBreadCrumbs = true
+  ShowPostNavLinks = true
+  ShowCodeCopyButtons = true
+  favicon = "/img/favicon.ico"
+
+  [params.search]
+    enabled = true
+    placeholder = "검색…"
+    
+
+[permalinks]
+  notes = "/:contentbasename/"
+
+# ✅ PaperMod 검색용 JSON은 home(홈)에서만 생성
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  # section = ["HTML", "RSS"]  # ← 굳이 필요 없으면 아예 제거
+
+# ✅ Raw HTML(<details> 등) 허용
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+# (선택) 경고 끄기
+# ignoreLogs = ['warning-goldmark-raw-html']
